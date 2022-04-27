@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+      <item android:id="@+id/nav_users"
+        android:title="All Users"
+        android:icon="@drawable/ic_users_account"/>
+
+    <item android:id="@+id/nav_Chat"
+    android:title="Chats"
+    android:icon="@drawable/ic_chat_black_24dp"/>
+
+    <item android:id="@+id/nav_GroupChats"
+        android:title="Group Chats"
+        android:icon="@drawable/ic_group_white"/>
+
+</menu>

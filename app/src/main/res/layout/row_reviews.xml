@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="2dp"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardElevation="3dp"
+    app:contentPadding="5dp"    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/profileLl"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginRight="5dp">
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/rowReviewprofileIv"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/ic_person_gray"
+                app:civ_border="true"
+                app:civ_border_color="@color/colorRed"
+                app:civ_border_width="1dp"
+                android:layout_marginRight="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameTv"
+                android:text="Name"
+                android:textColor="@color/colorblack"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            android:layout_below="@id/profileLl"
+            android:layout_marginEnd="10dp"
+            android:numStars="5"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dateTv"
+            android:text="dd/MM/yyyy"
+            android:textSize="12sp"
+            android:textColor="@color/colorGray02"
+            android:layout_below="@id/profileLl"
+            android:layout_toEndOf="@+id/ratingBar"
+            android:layout_gravity="center_horizontal"
+            android:layout_toRightOf="@+id/ratingBar" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/reviewTv"
+            android:text="The Original review of the user"
+            android:layout_below="@id/dateTv"
+            android:textColor="@color/colorblack"
+            android:layout_gravity="center_horizontal"
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

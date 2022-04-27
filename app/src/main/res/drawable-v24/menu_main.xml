@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <item android:id="@+id/action_logout"
+            android:title="Logout"
+            android:icon="@android:drawable/ic_menu_close_clear_cancel"/>
+            />
+
+        <item android:id="@+id/action_Search"
+            android:title="Search"
+            android:icon="@android:drawable/ic_menu_search"
+            app:showAsAction="always"
+            app:actionViewClass="android.widget.SearchView" />
+
+    <item android:id="@+id/action_add_post"
+        android:title="Add post"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_input_add"/>
+    />
+</menu>

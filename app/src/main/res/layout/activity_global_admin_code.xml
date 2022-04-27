@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GlobalAdminCodeActivity">
+
+
+    <!--Tool bar-->
+    <RelativeLayout
+        android:id="@+id/toolBarRl"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/shape_rect01"
+        >
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/backBtn"
+            android:src="@drawable/ic_back_white"
+            android:background="@color/colorRed"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/CodeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Enter Code"
+            android:textStyle="bold"
+            android:textSize="20sp"
+
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="10dp"/>
+
+           </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolBarRl">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/keyIv"
+            android:src="@drawable/ic_key_gray"
+            android:layout_centerHorizontal="true"
+            app:civ_border="true"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Welcome Global Admin .. Insert your secret Code"
+            android:layout_below="@+id/keyIv"
+            android:gravity="center_horizontal"
+            android:id="@+id/welcomeMsgTv"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorblack"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/welcomeMsgTv"
+            android:id="@+id/CodeRl">
+
+
+
+
+        <EditText
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text=" "
+            android:textAlignment="center"
+            android:id="@+id/firstnumET"
+           android:layout_toLeftOf="@+id/secondNumEt"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:inputType="number"
+            android:maxLines="1"
+            android:maxEms="1"
+            android:gravity="center_horizontal" />
+
+        <EditText
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text=" "
+            android:textAlignment="center"
+            android:id="@+id/secondNumEt"
+            android:layout_toLeftOf="@+id/empty"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:inputType="number"
+            android:maxLines="1"
+            android:maxEms="1"
+            android:gravity="center_horizontal" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:textSize="1sp"
+                android:id="@+id/empty"
+                android:layout_centerHorizontal="true"
+
+                  />
+
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text=" "
+                android:textAlignment="center"
+                android:id="@+id/thirdNumET"
+                android:layout_toRightOf="@+id/empty"
+                android:inputType="number"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:maxLines="1"
+                android:maxEms="1"
+                android:gravity="center_horizontal" />
+
+
+        <EditText
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text=" "
+            android:textAlignment="center"
+            android:id="@+id/ForthNumEt"
+            android:layout_toRightOf="@+id/thirdNumET"
+            android:inputType="number"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:maxLines="1"
+            android:maxEms="1"
+            android:gravity="center_horizontal" />
+
+
+        </RelativeLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm"
+            android:background="@drawable/button_red"
+            android:layout_below="@+id/CodeRl"
+            android:layout_margin="20dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/confirmBtn"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

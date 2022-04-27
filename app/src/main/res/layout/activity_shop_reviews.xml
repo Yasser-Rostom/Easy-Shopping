@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray00"
+    tools:context=".ShopReviewsActivity"
+    android:orientation="vertical">
+
+    <!--ToolBar-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@id/toolBarRl"
+        android:background="@drawable/shape_rect08"
+        android:padding="10dp">
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/BackBtnReview"
+            android:background="@null"
+            android:src="@drawable/ic_back_white" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorWhite"
+            android:text="Shop Reviews"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+
+
+    </RelativeLayout>
+    <!--Shop Details-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/profileIV"
+            android:src="@drawable/ic_store_mall"
+            app:civ_border="true"
+            app:civ_border_color="@color/colorRed"
+            app:civ_border_width="4dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shopNameTvR"
+            android:text="Shop Name"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"/>
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingTv"
+            android:text="4.3 [100.098,577]"
+            android:textSize="12sp"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+    <!--Reviews list-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reviewRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/row_reviews"/>
+
+
+</LinearLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!---->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/toolBarRl"
+        android:background="@drawable/shape_rect01"
+        android:padding="10dp">
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@null"
+        android:src="@drawable/ic_back_white"
+        android:id="@+id/bsBackBtn"/>
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@null"
+        android:src="@drawable/ic_delete_black_24dp"
+        android:id="@+id/bsDeleteBtn"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@null"
+        android:src="@drawable/ic_edit_gray"
+        android:id="@+id/bsEditBtn"
+        android:layout_toStartOf="@+id/bsDeleteBtn"
+        android:layout_toLeftOf="@+id/bsDeleteBtn" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bsNameTv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:text="Product Details"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/bsProdcutIconIV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_add_shopping_w"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bsProdcutIconIV"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bsDiscountNoteTv"
+            android:background="@drawable/shape_rect06"
+            android:padding="5dp"
+            android:textSize="10dp"
+            android:text="10% OFF"
+            android:paddingEnd="5dp"
+            android:textColor="@color/colorGreen"
+            android:paddingRight="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bsTitle"
+            android:padding="5dp"
+            android:text="The Prodcut Title"
+            android:textColor="@color/colorblack"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bsDescriptionTv"
+            android:padding="5dp"
+            android:text="The Product Description"
+            android:textColor="@color/colorblack" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bsCategoryTv"
+            android:padding="5dp"
+            android:text="Category"
+            android:textColor="@color/colorblack" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bsQuantityTv"
+            android:padding="5dp"
+            android:text="Quantity"
+            android:textColor="@color/colorblack" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bsDiscountedPriceTV"
+                android:text="10 S.P"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/colorGray02"
+                android:layout_marginRight="10dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bsOriginalPriceTv"
+                android:text="15 S.P"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/colorGray02"
+                android:layout_marginRight="10dp"
+                android:layout_toEndOf="@+id/bsDiscountedPriceTV"
+                android:layout_toRightOf="@+id/bsDiscountedPriceTV" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

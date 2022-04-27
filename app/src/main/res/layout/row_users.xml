@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/rowRVbgcolor"
+    app:cardElevation="3dp"
+    app:contentPadding="7dp"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="6dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/profileLl"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginRight="5dp">
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/usersprofileIv"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/ic_person_gray"
+                app:civ_border="true"
+                app:civ_border_color="@color/colorRed"
+                app:civ_border_width="1dp"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameTv"
+                android:text="Name"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/roleTv"
+            android:text="Role"
+            android:textSize="12sp"
+            android:textColor="@color/colorWhite"
+            android:layout_below="@id/profileLl"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@+id/slashTv" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" / "
+            android:layout_below="@+id/profileLl"
+            android:id="@+id/slashTv"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorWhite"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/statusTv"
+            android:text="acount status"
+            android:textSize="12sp"
+            android:textColor="@color/colorWhite"
+            android:layout_below="@id/profileLl"
+            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@+id/slashTv"
+            android:layout_toRightOf="@+id/slashTv" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_navigate_next_gray"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/nextIv"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

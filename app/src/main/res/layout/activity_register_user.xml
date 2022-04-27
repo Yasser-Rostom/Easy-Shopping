@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".RegisterUserActivity">
+    <!--Tool bar-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/shape_rect01">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/sbackBtn"
+            android:src="@drawable/ic_back_white"
+            android:background="@color/colorRed"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/RegisterTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Register Customer "
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="10dp"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/sgpsBtn"
+            android:src="@drawable/ic_gps_gray"
+            android:background="@color/colorRed"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iconIv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/shape_circle01"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/ic_key_white"
+        android:padding="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iconIv">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/sprofileIv"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                app:civ_border="true"
+                app:civ_border_color="@color/colorRed"
+                app:civ_border_width="1dp"
+                android:src="@drawable/ic_person_gray"
+                android:layout_marginBottom="20dp"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/userSellerSwitch"
+                android:layout_margin="5dp"
+                android:layout_below="@id/sprofileIv"
+                android:text="Customer Account"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorGreen"
+                android:layout_marginTop="20dp"/>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/firstNameTILL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userSellerSwitch">
+
+            <EditText
+                android:id="@+id/firstNameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="First Name"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_assignment_gray"
+                android:drawablePadding="5dp"
+                android:layout_margin="5dp"
+                android:inputType="textPersonName|textCapWords"
+                android:drawableLeft="@drawable/ic_mail_gray"
+                android:background="@drawable/shape_rect02"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lastNameTILL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstNameTILL">
+
+            <EditText
+                android:id="@+id/lastNameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstNameEt"
+                android:hint="Last Name"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_assignment_gray"
+                android:drawablePadding="5dp"
+                android:layout_margin="5dp"
+                android:inputType="textPersonName|textCapWords"
+                android:drawableLeft="@drawable/ic_mail_gray"
+                android:background="@drawable/shape_rect02"
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+
+             <TextView
+                android:id="@+id/birthdayET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lastNameTILL"
+                android:hint="Birth date"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_assignment_gray"
+                android:drawablePadding="5dp"
+                android:layout_margin="5dp"
+                android:textSize="18sp"
+                android:textColor="@color/colorblack"
+                android:inputType="textPersonName|textCapWords"
+                android:drawableLeft="@drawable/ic_mail_gray"
+                android:background="@drawable/shape_rect02"/>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/shopNameTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/birthdayET"
+                android:visibility="gone">
+            <EditText
+                android:id="@+id/shopNameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/birthdayET"
+                android:hint="Shop Name"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_store_gray"
+                android:drawablePadding="5dp"
+                android:layout_margin="5dp"
+                android:inputType="textPersonName|textCapWords"
+                android:drawableLeft="@drawable/ic_mail_gray"
+                android:background="@drawable/shape_rect02" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phoneTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shopNameTIL">
+            <EditText
+                android:id="@+id/sphoneEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shopNameEt"
+                android:hint="Phone Number: e.g 0932111222"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_phone_gray"
+                android:drawablePadding="5dp"
+                android:layout_margin="5dp"
+                android:inputType="number"
+                android:drawableLeft="@drawable/ic_mail_gray"
+                android:background="@drawable/shape_rect02"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/deliveryFeeTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phoneTIL"
+                android:visibility="gone">
+
+            <EditText
+                android:id="@+id/deliveryFeeEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Delivery Fees"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_shipping_gray"
+                android:drawablePadding="5dp"
+                android:layout_margin="5dp"
+                android:inputType="numberDecimal"
+                android:drawableLeft="@drawable/ic_mail_gray"
+                android:background="@drawable/shape_rect02"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:id="@+id/saddressL1"
+                android:layout_below="@+id/deliveryFeeTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/scountryEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Country"
+                    android:padding="10dp"
+                    android:drawableStart="@drawable/ic_location_gray"
+                    android:drawablePadding="5dp"
+                    android:layout_margin="5dp"
+                    android:inputType="textPostalAddress"
+                    android:drawableLeft="@drawable/ic_location_gray"
+                    android:background="@drawable/shape_rect02"
+                    android:layout_weight="1"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/scityEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="City"
+                    android:padding="10dp"
+                    android:drawableStart="@drawable/ic_location_gray"
+                    android:drawablePadding="5dp"
+                    android:layout_margin="5dp"
+                    android:inputType="textPostalAddress"
+                    android:drawableLeft="@drawable/ic_location_gray"
+                    android:background="@drawable/shape_rect02"
+                    android:layout_weight="1"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/sstatEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="State"
+                    android:padding="10dp"
+                    android:drawableStart="@drawable/ic_location_gray"
+                    android:drawablePadding="5dp"
+                    android:layout_margin="5dp"
+                    android:inputType="textPostalAddress"
+                    android:drawableLeft="@drawable/ic_location_gray"
+                    android:background="@drawable/shape_rect02"
+                    android:layout_weight="1"
+                    />
+
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/saddressEt">
+
+            <EditText
+                android:id="@+id/sEmailEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/saddressEt"
+                android:hint="Email"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_mail_gray"
+                android:drawablePadding="5dp"
+                android:layout_margin="5dp"
+                android:inputType="textEmailAddress"
+                android:drawableLeft="@drawable/ic_mail_gray"
+                android:background="@drawable/shape_rect02"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/emailTIL"
+                app:passwordToggleEnabled="true">
+            <EditText
+                android:id="@+id/spasswordEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_lock_gray"
+                android:drawablePadding="5dp"
+                android:layout_margin="5dp"
+                android:inputType="textPassword"
+                android:drawableLeft="@drawable/ic_mail_gray"
+                android:background="@drawable/shape_rect02"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/cpasswordTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/passwordTIL"
+                app:passwordToggleEnabled="true">
+            <EditText
+                android:id="@+id/scPasswordEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Confirm Password"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_lock_gray"
+                android:drawablePadding="5dp"
+                android:layout_margin="5dp"
+                android:inputType="textPassword"
+                android:drawableLeft="@drawable/ic_mail_gray"
+                android:background="@drawable/shape_rect02"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <EditText
+                android:id="@+id/saddressEt"
+                android:layout_below="@+id/saddressL1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Complete address"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_address_gray"
+                android:drawablePadding="5dp"
+                android:layout_margin="5dp"
+                android:textSize="16sp"
+                android:inputType="textPostalAddress|textMultiLine"
+                android:drawableLeft="@drawable/ic_location_gray"
+                android:background="@drawable/shape_rect02"
+                android:layout_weight="1"/>
+
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sregisterBtn"
+                android:text="Register"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:minWidth="120dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorRed"
+                android:layout_below="@+id/cpasswordTIL"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/haveAccount"
+                android:layout_margin="5dp"
+                android:text="If you have an account... Login"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/sregisterBtn"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

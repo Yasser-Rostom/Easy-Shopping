@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="100dp"
+    android:layout_marginTop="10dp"
+    android:padding="10dp"
+    android:id="@+id/messageLayout"
+    android:layout_marginLeft="100dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/nameTv"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentRight="true"
+        android:text="name"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="3dp"/>
+    <RelativeLayout
+        android:layout_below="@+id/nameTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/profileIv"
+            app:civ_border_color="@null"
+           android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_person_gray"
+            android:layout_alignParentRight="true" />
+
+        <!-- Text view for time -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timeTv"
+            android:text="02/03/2020 06:00PM"
+            android:textColor="@color/colorblack"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:text="His Message"
+            android:padding="15dp"
+            android:background="@drawable/bg_sender"
+            android:textColor="@color/colorblack"
+            android:textSize="16sp"
+            android:layout_toLeftOf="@+id/profileIv"
+            android:id="@+id/messageTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+           />
+
+        <ImageView
+            android:id="@+id/messageIv"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_person_gray"
+            android:padding="15dp"
+            android:visibility="gone"
+            android:scaleType="fitXY"
+            android:background="@drawable/bg_sender"
+            android:layout_toLeftOf="@+id/profileIv"
+            android:layout_below="@+id/timeTv"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/isSeenTv"
+        android:gravity="end"
+        android:textAlignment="textEnd"
+        />
+
+</RelativeLayout>

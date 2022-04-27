@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="2dp"
+    app:cardElevation="1dp"
+    app:contentPadding="3dp"
+    android:padding="8dp"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardCornerRadius="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/orderIdTV"
+            android:text="Order:12121212"
+            android:textStyle="bold"/>
+        <!--Date when order was placed-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/orderDateTv"
+            android:text="dd/MM/yyyy"
+            android:layout_toStartOf="@+id/orderNextIv"
+            android:textColor="@color/colorGray02"
+            android:layout_toLeftOf="@+id/orderNextIv" />
+        <!--Email of the user who placed order-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/emailTv"
+            android:text="ABC@example.com"
+            android:layout_below="@+id/orderDateTv"
+            android:textColor="@color/colorGray02"/>
+        <!--Total amount of the order-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/orderAmountTv"
+            android:text="Total Amount: 32.33$"
+            android:layout_below="@+id/emailTv"
+            android:textColor="@color/colorGray02"/>
+        <!--Order status: In progress, completed, cancelled-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/statusTv"
+            android:layout_below="@+id/emailTv"
+            android:layout_marginTop="5dp"
+            android:layout_toStartOf="@+id/orderNextIv"
+            android:layout_toLeftOf="@+id/orderNextIv"
+            android:text="In progress"
+            android:textColor="@color/colorGreen"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/orderNextIv"
+            android:src="@drawable/ic_navigate_next_gray"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

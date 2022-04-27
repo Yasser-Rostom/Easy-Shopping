@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileEditUserActivity">
+
+    <!--Tool bar-->
+    <RelativeLayout
+        android:id="@+id/toolBarRl"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/shape_rect01">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/eubackBtn"
+            android:src="@drawable/ic_back_white"
+            android:background="@color/colorRed"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/editUserTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Edit Profile"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="10dp"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/eugpsBtn"
+            android:src="@drawable/ic_gps_gray"
+            android:background="@color/colorRed"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/iconRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+        <ImageView
+            android:id="@+id/iconIv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/shape_circle01"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_edit_gray"
+            android:padding="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iconRl">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cardProfile"
+                android:layout_centerHorizontal="true"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/colorRed"
+                app:contentPadding="5dp"
+                android:elevation="3dp"
+                app:cardUseCompatPadding="true"
+                app:cardPreventCornerOverlap="true"
+                android:outlineAmbientShadowColor="@color/colorblack">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/uprofileIv"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+
+                    android:layout_centerHorizontal="true"
+                    app:civ_border="true"
+                    app:civ_border_color="@color/colorRed"
+                    app:civ_border_width="1dp"
+                    android:src="@drawable/ic_person_gray"/>
+            </androidx.cardview.widget.CardView>
+
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/cardProfile"
+    android:layout_margin="5dp"
+
+    app:cardCornerRadius="10dp"
+    android:id="@+id/editcard"
+    app:cardBackgroundColor="@color/colorRed2">
+   <RelativeLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:background="@null">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/firstNameTILL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/firstNameEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="First Name"
+                    android:padding="10dp"
+                    android:drawableStart="@drawable/ic_assignment_gray"
+                    android:drawablePadding="5dp"
+                    android:layout_margin="5dp"
+                    android:inputType="textPersonName|textCapWords"
+                    android:drawableLeft="@drawable/ic_mail_gray"
+                    android:background="@drawable/shape_rect09"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lastNameTILL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstNameTILL">
+
+                <EditText
+                    android:id="@+id/lastNameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/firstNameEt"
+                    android:hint="Last Name"
+                    android:padding="10dp"
+                    android:drawableStart="@drawable/ic_assignment_gray"
+                    android:drawablePadding="5dp"
+                    android:layout_margin="5dp"
+                    android:inputType="textPersonName|textCapWords"
+                    android:drawableLeft="@drawable/ic_mail_gray"
+                    android:background="@drawable/shape_rect09"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phoneTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lastNameTILL">
+                <EditText
+                    android:id="@+id/uphoneEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/shopNameEt"
+                    android:hint="Phone Number: e.g 0932111222"
+                    android:padding="10dp"
+                    android:drawableStart="@drawable/ic_phone_gray"
+                    android:drawablePadding="5dp"
+                    android:layout_margin="5dp"
+                    android:inputType="number"
+                    android:drawableLeft="@drawable/ic_mail_gray"
+                    android:background="@drawable/shape_rect09"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/uaddressL1"
+                android:layout_below="@+id/phoneTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/ucountryEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Country"
+                    android:padding="10dp"
+                    android:drawableStart="@drawable/ic_location_gray"
+                    android:drawablePadding="5dp"
+                    android:layout_margin="5dp"
+                    android:inputType="textPostalAddress"
+                    android:drawableLeft="@drawable/ic_location_gray"
+                    android:background="@drawable/shape_rect09"
+                    android:layout_weight="1"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/ucityEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="City"
+                    android:padding="10dp"
+                    android:drawableStart="@drawable/ic_location_gray"
+                    android:drawablePadding="5dp"
+                    android:layout_margin="5dp"
+                    android:inputType="textPostalAddress"
+                    android:drawableLeft="@drawable/ic_location_gray"
+                    android:background="@drawable/shape_rect09"
+                    android:layout_weight="1"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/ustatEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="State"
+                    android:padding="10dp"
+                    android:drawableStart="@drawable/ic_location_gray"
+                    android:drawablePadding="5dp"
+                    android:layout_margin="5dp"
+                    android:inputType="textPostalAddress"
+                    android:drawableLeft="@drawable/ic_location_gray"
+                    android:background="@drawable/shape_rect09"
+                    android:layout_weight="1"
+                    />
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/uaddressEt"
+                android:layout_below="@+id/uaddressL1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Complete address"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_address_gray"
+                android:drawablePadding="5dp"
+                android:layout_margin="5dp"
+                android:textSize="16sp"
+                android:maxLines="1"
+                android:inputType="textPostalAddress|textMultiLine"
+                android:drawableLeft="@drawable/ic_location_gray"
+                android:background="@drawable/shape_rect09"
+                android:layout_weight="1"/>
+
+       <ImageView
+           android:layout_width="60dp"
+           android:layout_height="60dp"
+           android:layout_below="@+id/uaddressEt"
+           android:src="@drawable/ic_arrow_down_gray"
+           android:layout_centerHorizontal="true"/>
+   </RelativeLayout>
+</androidx.cardview.widget.CardView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/uUpdateBtn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_below="@id/editcard"
+                android:text="Update"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_red"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                />
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+    <!-- <EditText
+         android:id="@+id/uNameTv"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/uProfileIV"
+         android:layout_margin="5dp"
+         android:background="@drawable/shape_rect02"
+         android:drawableStart="@drawable/ic_person_gray"
+         android:drawablePadding="5dp"
+         android:hint="Full Name"
+         android:inputType="textPersonName|textCapWords"
+         android:drawableLeft="@drawable/ic_person_gray"
+         android:padding="10dp"/>
+
+
+     <EditText
+         android:id="@+id/uPhoneET"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/uProfileIV"
+         android:layout_margin="5dp"
+         android:background="@drawable/shape_rect02"
+         android:drawableStart="@drawable/ic_phone_gray"
+         android:drawablePadding="5dp"
+         android:hint="Full Name"
+         android:inputType="number"
+         android:drawableLeft="@drawable/ic_person_gray"
+         android:padding="10dp"/>-->
+
+
+
+</RelativeLayout>

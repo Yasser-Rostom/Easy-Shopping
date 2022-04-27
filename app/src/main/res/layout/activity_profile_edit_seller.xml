@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileEditSellerActivity">
+
+    <!--Tool bar-->
+    <RelativeLayout
+        android:id="@+id/toolBarRl"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/shape_rect01"
+        >
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/sebackBtn"
+            android:src="@drawable/ic_back_white"
+            android:background="@color/colorRed"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/seditUserTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Edit Profile"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="10dp"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/segpsBtn"
+            android:src="@drawable/ic_gps_gray"
+            android:background="@color/colorRed"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/seIconRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+        <ImageView
+            android:id="@+id/iconIv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/shape_circle01"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_edit_gray"
+            android:padding="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seIconRl">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/seprofileIv"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+
+                android:layout_centerHorizontal="true"
+                app:civ_border="true"
+                app:civ_border_color="@color/colorRed"
+                app:civ_border_width="1dp"
+                android:src="@drawable/ic_person_gray"/>
+
+
+            <EditText
+                android:id="@+id/firstNamtEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seprofileIv"
+                android:hint="First Name"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_assignment_gray"
+                android:drawablePadding="5dp"
+                android:layout_margin="5dp"
+                android:inputType="textPersonName|textCapWords"
+                android:drawableLeft="@drawable/ic_mail_gray"
+                android:background="@drawable/shape_rect02"/>
+            <EditText
+                android:id="@+id/lastNameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstNamtEt"
+                android:hint="Last Name"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_assignment_gray"
+                android:drawablePadding="5dp"
+                android:layout_margin="5dp"
+                android:inputType="textPersonName|textCapWords"
+                android:drawableLeft="@drawable/ic_mail_gray"
+                android:background="@drawable/shape_rect02"/>
+            <EditText
+                android:id="@+id/seShopNameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lastNameEt"
+                android:hint="Shop Name"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_store_gray"
+                android:drawablePadding="5dp"
+                android:layout_margin="5dp"
+                android:inputType="textPersonName|textCapWords"
+                android:drawableLeft="@drawable/ic_mail_gray"
+                android:background="@drawable/shape_rect02"/>
+
+            <EditText
+                android:id="@+id/sephoneEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seShopNameEt"
+                android:hint="Phone Number"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_person_gray"
+                android:drawablePadding="5dp"
+                android:layout_margin="5dp"
+                android:inputType="textPersonName|textCapWords"
+                android:drawableLeft="@drawable/ic_mail_gray"
+                android:background="@drawable/shape_rect02"/>
+
+            <EditText
+                android:id="@+id/sedeliveryFeeEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sephoneEt"
+                android:hint="Delivery Fees"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_shipping_gray"
+                android:drawablePadding="5dp"
+                android:layout_margin="5dp"
+                android:inputType="numberDecimal"
+                android:drawableLeft="@drawable/ic_mail_gray"
+                android:background="@drawable/shape_rect02"/>
+
+            <LinearLayout
+                android:id="@+id/seaddressL1"
+                android:layout_below="@+id/sedeliveryFeeEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/secountryEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Country"
+                    android:padding="10dp"
+                    android:drawableStart="@drawable/ic_location_gray"
+                    android:drawablePadding="5dp"
+                    android:layout_margin="5dp"
+                    android:inputType="textPostalAddress"
+                    android:drawableLeft="@drawable/ic_location_gray"
+                    android:background="@drawable/shape_rect02"
+                    android:layout_weight="1"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/secityEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="City"
+                    android:padding="10dp"
+                    android:drawableStart="@drawable/ic_location_gray"
+                    android:drawablePadding="5dp"
+                    android:layout_margin="5dp"
+                    android:inputType="textPostalAddress"
+                    android:drawableLeft="@drawable/ic_location_gray"
+                    android:background="@drawable/shape_rect02"
+                    android:layout_weight="1"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/sestatEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="State"
+                    android:padding="10dp"
+                    android:drawableStart="@drawable/ic_location_gray"
+                    android:drawablePadding="5dp"
+                    android:layout_margin="5dp"
+                    android:inputType="textPostalAddress"
+                    android:drawableLeft="@drawable/ic_location_gray"
+                    android:background="@drawable/shape_rect02"
+                    android:layout_weight="1"
+                    />
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/seaddressEt"
+                android:layout_below="@+id/seaddressL1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Complete address"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_address_gray"
+                android:drawablePadding="5dp"
+                android:layout_margin="5dp"
+                android:textSize="16sp"
+                android:inputType="textPostalAddress|textMultiLine"
+                android:drawableLeft="@drawable/ic_location_gray"
+                android:background="@drawable/shape_rect02"
+                android:layout_weight="1"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/ShopOpenSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seaddressEt"
+                android:layout_margin="5dp"
+                android:text="Shop Open"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/seUpdateBtn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_below="@id/ShopOpenSwitch"
+                android:text="Update"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

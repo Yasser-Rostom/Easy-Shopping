@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:id="@+id/messagelayout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/profileIv"
+            app:civ_border_color="@null"
+            android:visibility="gone"
+            android:src="@drawable/ic_person_gray"/>
+
+        <!-- Text view for time -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timeTv"
+            android:text="02/03/2020 06:00PM"
+            android:textColor="@color/colorblack"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:text="His Message"
+            android:padding="15dp"
+            android:background="@drawable/bg_sender"
+            android:textColor="@color/colorblack"
+            android:textSize="16sp"
+           android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/timeTv"
+            android:id="@+id/messageTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/timeTv" />
+
+        <ImageView
+            android:id="@+id/messageIv"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_person_gray"
+            android:padding="15dp"
+            android:scaleType="fitCenter"
+            android:background="@drawable/bg_sender"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/isSeenTv"
+        android:gravity="end"
+        android:textAlignment="textEnd"
+       />
+
+</LinearLayout>

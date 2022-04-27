@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:contentPadding="3dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <!--ImageView: User Profile Image-->
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/chatlistProfileIv"
+            android:src="@drawable/ic_person_gray"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp" />
+
+        <!--ImageView : Online/Offline Status-->
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/onlineStatusIv"
+            android:layout_marginLeft="5dp" />
+
+        <!--TextView : UserNAme-->
+        <TextView
+            android:id="@+id/chatlistNameTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/chatlistProfileIv"
+            android:layout_toRightOf="@+id/chatlistProfileIv"
+            android:textSize="18sp"
+            android:textColor="@color/colorblack"
+            android:text="His name"/>
+        <!--TextView: Last Message(by sender/receiver)-->
+        <TextView
+            android:id="@+id/LastMessageTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/chatlistProfileIv"
+            android:layout_toRightOf="@+id/chatlistProfileIv"
+            android:textSize="13sp"
+            android:maxLines="2"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/colorAccent"
+            android:text="Last Message"
+            android:layout_below="@+id/chatlistNameTv"
+            android:layout_marginLeft="4dp" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

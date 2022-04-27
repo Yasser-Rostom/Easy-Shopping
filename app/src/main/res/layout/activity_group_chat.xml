@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1EDED"
+    tools:context=".ChatActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:id="@+id/toolbar"
+        android:background="@drawable/shape_rect01"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+        <!-- Receiver Profile Picture-->
+        <com.mikhaellopez.circularimageview.CircularImageView
+
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/profileIv"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_person_gray"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/bar">
+            <!--Receiver name -->
+            <TextView
+                android:id="@+id/groupTitleTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Group Title"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                />
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <!--RecyclerView-->
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chat_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            app:stackFromEnd="true"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_groupchat_left"
+            android:layout_above="@+id/chatlayout"
+            />
+
+    <!-- Send message edit text and button in layout -->
+    <LinearLayout
+        android:id="@+id/chatlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/attachBtn"
+            android:background="@null"
+            android:src="@drawable/ic_attach_black"/>
+
+        <!--EditText: input message-->
+        <EditText
+            android:id="@+id/messageET"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="Start typing"
+            android:inputType="textMultiLine|textCapSentences"
+            android:padding="15dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <!--Button : send message -->
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_chat_send"
+            android:background="@null"
+            android:id="@+id/sendBtn"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

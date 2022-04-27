@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "105554668102",
+    "firebase_url": "https://easy-shopping-2fa33.firebaseio.com",
+    "project_id": "easy-shopping-2fa33",
+    "storage_bucket": "easy-shopping-2fa33.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105554668102:android:af1066acd2a6638f6e3847",
+        "android_client_info": {
+          "package_name": "com.easyshopping"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "105554668102-4dnorkidb6lkma5p3hsnt749pesa8cqr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_IGadAFRfOjdoG9xXcGiz86P70kANARI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "105554668102-4dnorkidb6lkma5p3hsnt749pesa8cqr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105554668102:android:4aad868d0b0030096e3847",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "105554668102-4dnorkidb6lkma5p3hsnt749pesa8cqr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_IGadAFRfOjdoG9xXcGiz86P70kANARI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "105554668102-4dnorkidb6lkma5p3hsnt749pesa8cqr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShopContactInfoActivity"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_rect0001">
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/backBtn"
+            android:src="@drawable/ic_back_white"
+            android:background="@null"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Contact"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+
+    </RelativeLayout>
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/contactIv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/toolbarRL"
+        android:src="@drawable/ic_phone_gray"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        app:civ_border="true"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/colorRed"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contactIv">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/infoRl"
+            android:layout_below="@id/contactIv"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:fitsSystemWindows="true">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mobile1Cv"
+                app:cardCornerRadius="30dp"
+                android:padding="10dp"
+                android:layout_margin="5dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/mobile1ET"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_toRightOf="@+id/drawable1"
+                        android:background="@drawable/shape_rect002"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center_horizontal"
+                        android:hint="mobile 1"
+                        android:padding="8dp"
+                        android:paddingLeft="8dp"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="18sp"
+                        android:typeface="sans"
+                        android:inputType="number"
+                        android:maxLines="1"/>
+
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_phone_gray"
+                        android:id="@+id/drawable1"
+                        android:layout_marginRight="-27dp"
+                        android:layout_marginTop="1dp"
+                        app:civ_border="true"
+                        app:civ_border_color="@color/colorRed"
+                        />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobile1Cv"
+                android:id="@+id/mobile2Cv"
+                app:cardCornerRadius="30dp"
+                android:padding="5dp"
+                android:layout_margin="5dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/mobile2ET"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_toRightOf="@+id/drawable2"
+                        android:background="@drawable/shape_rect002"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center_horizontal"
+                        android:hint="mobile 2"
+                        android:padding="8dp"
+                        android:paddingLeft="8dp"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="18sp"
+                        android:typeface="sans"
+                        android:inputType="number"/>
+
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_phone_gray"
+                        android:id="@+id/drawable2"
+                        android:layout_marginRight="-27dp"
+                        android:layout_marginTop="1dp"
+                        app:civ_border="true"
+                        app:civ_border_color="@color/colorRed"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobile2Cv"
+                android:id="@+id/fixedPhoneCv"
+                app:cardCornerRadius="30dp"
+                android:padding="5dp"
+                android:layout_margin="5dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/fixedPhoneET"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_toRightOf="@+id/drawable3"
+                        android:background="@drawable/shape_rect002"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center_horizontal"
+                        android:hint="fixed Phone"
+                        android:padding="8dp"
+                        android:paddingLeft="8dp"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="18sp"
+                        android:typeface="sans"
+                        android:inputType="number"
+                        android:maxLines="1"/>
+
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_phone_gray"
+                        android:id="@+id/drawable3"
+                        android:layout_marginRight="-27dp"
+                        android:layout_marginTop="1dp"
+                        app:civ_border="true"
+                        app:civ_border_color="@color/colorRed"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fixedPhoneCv"
+                android:id="@+id/emailCV"
+                app:cardCornerRadius="30dp"
+                android:padding="5dp"
+                android:layout_margin="5dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/AdditionalEmailEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_toRightOf="@+id/drawable4"
+                        android:background="@drawable/shape_rect002"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center_horizontal"
+                        android:hint="e.g email@example.com"
+                        android:padding="8dp"
+                        android:paddingLeft="8dp"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="18sp"
+                        android:typeface="sans"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"/>
+
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_email_black_24dp"
+                        android:id="@+id/drawable4"
+                        android:layout_marginRight="-27dp"
+                        android:layout_marginTop="1dp"
+                        app:civ_border="true"
+                        app:civ_border_color="@color/colorRed"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emailCV"
+                android:id="@+id/facebookCv"
+                app:cardCornerRadius="30dp"
+                android:padding="5dp"
+                android:layout_margin="5dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/facebookEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_toRightOf="@+id/drawable5"
+                        android:background="@drawable/shape_rect002"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center_horizontal"
+                        android:hint="e.g email@example.com"
+                        android:padding="8dp"
+                        android:paddingLeft="8dp"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="18sp"
+                        android:typeface="sans"
+                        android:maxLines="1"/>
+
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_facebook_30"
+                        android:id="@+id/drawable5"
+                        android:layout_marginRight="-27dp"
+                        android:layout_marginTop="1dp"
+                        app:civ_border="true"
+                        app:civ_border_color="@color/colorRed"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/facebookCv"
+                android:id="@+id/twitterCv"
+                app:cardCornerRadius="30dp"
+                android:padding="5dp"
+                android:layout_margin="5dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/twitterEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_toRightOf="@+id/drawable6"
+                        android:background="@drawable/shape_rect002"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center_horizontal"
+                        android:hint="Twitter"
+                        android:padding="8dp"
+                        android:paddingLeft="8dp"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="18sp"
+                        android:typeface="sans"
+                        android:maxLines="1"/>
+
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_twitter_30"
+                        android:id="@+id/drawable6"
+                        android:layout_marginRight="-27dp"
+                        android:layout_marginTop="1dp"
+                        app:civ_border="true"
+                        app:civ_border_color="@color/colorRed"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+ </ScrollView>
+
+
+
+
+</RelativeLayout>

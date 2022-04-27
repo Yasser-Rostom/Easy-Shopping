@@ -1,0 +1,177 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainUserActivity"
+    tools:showIn="@layout/app_bar_main_user">
+
+    <!--Tool bar-->
+    <RelativeLayout
+        android:id="@+id/userToolBarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rect01">
+
+
+<!--
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/UserProfileIV"
+            app:civ_border="true"
+            app:civ_border_color="@color/colorRed"
+            android:src="@drawable/ic_person_gray"/>
+        <TextView
+            android:id="@+id/UserNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:layout_marginTop="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:layout_toEndOf="@id/UserProfileIV"
+            android:layout_toRightOf="@id/UserProfileIV" />
+
+
+        <TextView
+            android:id="@+id/userEmailTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:layout_toEndOf="@+id/UserProfileIV"
+            android:textColor="@color/colorWhite"
+            android:layout_toRightOf="@+id/UserProfileIV"
+            android:layout_below="@id/UserNameTV"/>
+
+        <TextView
+            android:id="@+id/userPhoneTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone"
+            android:layout_toEndOf="@+id/UserProfileIV"
+            android:textColor="@color/colorWhite"
+            android:layout_toRightOf="@+id/UserProfileIV"
+            android:layout_below="@id/userEmailTV"/>-->
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/searchRl">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rowSearchProductEt"
+        android:layout_margin="5dp"
+        android:background="@drawable/shape_rect02"
+        android:drawableStart="@drawable/ic_search_gray"
+        android:layout_toStartOf="@+id/filterProductionBtn"
+        android:drawableLeft="@drawable/ic_search_gray"
+        android:drawablePadding="10dp"
+        android:padding="10dp"
+        android:layout_toLeftOf="@+id/filterProductionBtn" />
+    <ImageButton
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/filterProductionBtn"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_filter_gray"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/filteredShops"
+        android:layout_below="@+id/rowSearchProductEt"
+        android:textColor="@color/colorblack"
+        android:text="Showing All"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone"/>
+</RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/suggestionRv"
+            app:stackFromEnd="true"
+            app:reverseLayout="true"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            tools:listitem="@layout/row_suggestions"
+            android:layout_below="@+id/searchRl"/>
+        <!--Products-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/suggestionRv"
+            android:orientation="horizontal"
+            android:layout_margin="8dp"
+            android:background="@drawable/shape_rect04" >
+
+            <TextView
+                android:id="@+id/tabShopTv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Shops"
+                android:background="@drawable/shape_rect05"
+                android:textColor="@color/colorPrimaryDark"/>
+            <!--Products-->
+            <TextView
+                android:id="@+id/tabOrdersTv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Orders"
+
+                android:textColor="@color/colorPrimaryDark"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--Shops-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/shopRl"
+        android:layout_below="@id/userToolBarRl"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/filteredShops"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/shopsRv"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_shops" />
+
+
+
+    </RelativeLayout>
+    <!--RecyclerView : show orders-->
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/OrdersRl"
+        android:layout_below="@id/shopRl">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ordersRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:stackFromEnd="true"
+            app:reverseLayout="true"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_order_user"/>
+
+    </RelativeLayout>
+</RelativeLayout>

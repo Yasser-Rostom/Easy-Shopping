@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rect01">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/QproductIV"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_shopping_cart"
+            app:civ_border="true"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/colorWhite" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/QtitleTv"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/QproductIV"
+            android:layout_marginTop="5dp"
+            android:text="Product Title"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/QquantityTv"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/QtitleTv"
+            android:layout_marginTop="5dp"
+            android:text="Quantity"
+            android:textColor="@color/colorWhite"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/QdescriptionTv"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/QquantityTv"
+            android:layout_marginTop="5dp"
+            android:text="Product Description"
+            android:textColor="@color/colorWhite"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/QdiscountedNoteTv"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:text="10% OFF"
+            android:textColor="@color/colorGreen"
+            android:background="@drawable/shape_rect06"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/QoriginalPriceTv"
+            android:padding="10dp"
+            android:text="150 S.P"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorblack"
+            android:gravity="start" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/QpriceDiscountedTv"
+            android:padding="10dp"
+            android:layout_toEndOf="@+id/QoriginalPriceTv"
+            android:text="10 S.P"
+            android:textColor="@color/colorblack"
+            android:layout_toRightOf="@+id/QoriginalPriceTv" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/finalPriceTv"
+            android:layout_alignParentEnd="true"
+            android:text="Final Price"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorblack"
+            android:gravity="start"
+            android:layout_alignParentRight="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/wantedQuantityLL"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="60dp"
+            android:layout_centerVertical="true">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/minusBtn"
+                android:src="@drawable/ic_remove_black"
+                android:background="@null"/>
+
+            <TextView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/wantedQuantityTv"
+                android:text="2"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:background="@drawable/shape_circle00"
+                android:gravity="center_horizontal" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/incrementBtn"
+                android:src="@drawable/ic_add_black"
+                android:background="@null"
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addToCartBtn"
+        android:layout_below="@id/wantedQuantityLL"
+        android:background="@color/colorRed"
+        android:textAlignment="center"
+        android:text="Add To Cart"
+        android:gravity="center_vertical"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"/>
+
+</LinearLayout>
